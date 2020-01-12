@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+<style>
+    body {
+        background-color: #050210;
+    }
+    .box {
+        position: absolute;
+        width: 420px;
+        height: 420px;
+        top: 300px;
+        left: 650px;
+        border-radius: 100%;
+       animation-name: rotacija;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+}
+
+    .box {
+        background: repeating-linear-gradient(#fb5dad, #55fb9f, #b97aff);
+    }
+    @keyframes rotacija {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+    .box::after {
+        content: '';
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        background: linear-gradient(#fb5dad, #55fb9f, #b97aff);
+        width: 450px;
+        height: 450px;
+        filter: blur(60px);
+        animation: rotate 1s linear infinite;
+        border-radius: 100%;
+    }
+.box2 {
+     position: absolute;
+     top: 335px;
+     left: 682px;
+    width:350px;
+    height: 350px;
+    border-radius: 100%;
+    background-color: #050210;
+    
+
+}
+.box3 {
+    position: relative;
+    top: 400px;
+    left: 750px;
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    background-color: #060218;
+    animation-name: puls;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    }
+  @keyframes puls {
+      0% {
+          transform: scale(.1);
+      }
+      100% {
+          transform: scale(1.5);
+      }
+  }
+    
+</style>
+</head>
+<body>
+    <div id="div" class="box"></div>
+    <div id="div1" class="box2"></div>
+    <div id="div2" class="box3"></div>
+</body>
+</html>
